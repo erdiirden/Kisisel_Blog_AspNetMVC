@@ -23,9 +23,19 @@ namespace BusinessLayer.Concrete
             _experienceDal.Insert(t);
         }
 
+        public void TAdd(IExperienceService t)
+        {
+            throw new NotImplementedException();
+        }
+
         public void TDelete(Experience t)
         {
             _experienceDal.Delete(t);
+        }
+
+        public void TDelete(IExperienceService t)
+        {
+            throw new NotImplementedException();
         }
 
         public Experience TGetByID(int id)
@@ -41,6 +51,21 @@ namespace BusinessLayer.Concrete
         public void TUpdate(Experience t)
         {
             _experienceDal.Update(t);
+        }
+
+        public void TUpdate(IExperienceService t)
+        {
+            throw new NotImplementedException();
+        }
+
+        IExperienceService IGenericService<IExperienceService>.TGetByID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        List<IExperienceService> IGenericService<IExperienceService>.TGetList()
+        {
+            throw new NotImplementedException();
         }
     }
 }
